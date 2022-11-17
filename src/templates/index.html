@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="All About Restaurant in Indonesia">
+  <meta name="theme-color" content="#DB0000"/>
+  
+  <link rel="icon" type="image/png" href="favicon1.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <link rel="manifest" href="./app.webmanifest">
+
+  <title>Restaurant Apps</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+</head>
+<body>
+  <!--header-->
+  <a href="#maincontent" class="skip-link">Menuju ke konten</a>
+  <header class="header">
+    <div class="header_inner">
+      <h1 tabindex="0" class="header_title">
+        Alana's Restaurant
+      </h1>
+    </div>
+    <a id="menu" class="header_menu" href="#" aria-label="navigation-menu">☰</a>
+  
+  <!--nav-->
+    <nav id="drawer" class="navbar">
+      <ul class="nav_list">
+        <li class="nav_item"><a href="/">Home</a></li>
+        <li class="nav_item"><a href="#/favorite">Favorite</a></li>
+        <li class="nav_item"><a href="https://github.com/muazahalwyh">About Us</a></li>
+      </ul>
+    </nav>
+  </header>  
+
+  <!--hero-->  
+  <div class="hero">
+    <picture>
+      <source media="(max-width: 650px)" srcset="../images/hero-image_2-small.jpg" type="image/jpeg">
+      <source media="(min-width: 650px)" srcset="../images/hero-image_2-medium.jpg" type="image/jpeg">
+      <source media="(min-width: 1200px)" srcset="../images/hero-image_2-large.jpg" type="image/jpeg">
+      <img
+          width="100%" height="360px" 
+          src="../images/heros/hero-image_2.jpg" 
+          alt="hero website"
+      />
+    </picture>
+    <div class="hero_inner">
+      <h1 tabindex="0" class="hero_title">Restaurant Kuliner di Indonesia</h1>
+      <p tabindex="0" class="hero_tagline">Menikmati Makanan di Berbagai Tempat Restaurant Indonesia</p>
+      <a class="btn_hero" tabindex="0" href="#restaurant_item">Search Here!</a>
+    </div>
+  </div>
+  
+  <main tabindex="0" id="maincontent">
+  <!--katalog-->
+  <section id="contentMain" class="content">
+    <div class="latest">
+      <h1 tabindex="0" id="Katalog" class="latest_label">Restaurant di Indonesia Khas Daerah</h1>
+    </div>
+    <div class="cards" id="restaurant_item">
+    </div>
+  </section>
+  </main>
+
+  <!--footer-->
+  <footer>
+    <p tabindex="0">Copyright &#169; 2022, Alana's Restaurant</p>
+  </footer>
+</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+</html>
