@@ -68,7 +68,7 @@ describe('Searching restaurants', () => {
         id: 2,
         name: 'Dua',
       }]);
-      
+
       expect(document.querySelectorAll('.post_item').length)
         .toEqual(2);
     });
@@ -84,17 +84,16 @@ describe('Searching restaurants', () => {
     });
 
     it('should show - when the restaurant returned does not contain a title', (done) => {
-      // document.getElementById('restaurant-search-container').addEventListener('restaurants:searched:updated', () => {
-        document.getElementById('restaurants').addEventListener('restaurants:updated', () => {
+      document.getElementById('restaurants').addEventListener('restaurants:updated', () => {
         const restaurantnames = document.querySelectorAll('.post_item_title');
         expect(restaurantnames.item(0).textContent).toEqual('-');
 
-          done();
-        });
+        done();
+      });
 
       favoriteRestaurants.searchRestaurant.withArgs('restaurant a').and.returnValues([
         { id: 444 },
-      ])
+      ]);
 
       searchRestaurant('restaurant a');
     });
@@ -109,27 +108,26 @@ describe('Searching restaurants', () => {
       searchRestaurant('    ');
       expect(presenter.latestQuery.length)
         .toEqual(0);
-      
-        searchRestaurant('');
-        expect(presenter.latestQuery.length)
-          .toEqual(0);
-  
-        searchRestaurant('\t');
-        expect(presenter.latestQuery.length)
-          .toEqual(0);
-      });
 
-      it('should show all favorite restaurants', () => {
-        searchRestaurant('    ');
+      searchRestaurant('');
+      expect(presenter.latestQuery.length)
+        .toEqual(0);
 
-        expect(favoriteRestaurants.getAllRestaurants)
+      searchRestaurant('\t');
+      expect(presenter.latestQuery.length)
+        .toEqual(0);
+    });
+
+    it('should show all favorite restaurants', () => {
+      searchRestaurant('    ');
+
+      expect(favoriteRestaurants.getAllRestaurants)
         .toHaveBeenCalled();
     });
   });
 
   describe('When no favorite restaurants could be found', () => {
     it('should show the empty message', (done) => {
-
       document.getElementById('restaurants').addEventListener('restaurants:updated', () => {
         expect(document.querySelectorAll('.restaurant-item__not__found').length).toEqual(1);
 
@@ -139,24 +137,23 @@ describe('Searching restaurants', () => {
       favoriteRestaurants.searchRestaurant.withArgs('restaurant a')
         .and
         .returnValues([]);
-      
+
       searchRestaurant('restaurant a');
     });
 
     it('should not show any restaurant', (done) => {
-
       document.getElementById('restaurants')
         .addEventListener('restaurants:updated', () => {
           expect(document.querySelectorAll('.post_item').length)
             .toEqual(0);
-        done();
-      });
+          done();
+        });
 
       // favoriteRestaurants.searchRestaurant.withArgs('restaurant a').and.returnValues([]);
       favoriteRestaurants.searchRestaurant.withArgs('restaurant a')
         .and
         .returnValues([]);
-      
+
       searchRestaurant('restaurant a');
     });
   });

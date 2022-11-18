@@ -11,7 +11,6 @@ Before(({ I }) => {
   I.amOnPage('/#/favorite');
 });
 
-
 // SKENARIO UJI 1
 Scenario('showing empty liked restaurants', ({ I }) => {
   I.seeElement('#query');
@@ -39,7 +38,7 @@ Scenario('Unliking one restaurant', async ({ I }) => {
   I.click('#likeButton');
   I.wait(3);
 
-  /* Unfavorite resto */ 
+  /* Unfavorite resto */
 
   I.amOnPage('/#/favorite');
   I.wait(3);
@@ -63,7 +62,7 @@ Scenario('Unliking one restaurant', async ({ I }) => {
 
   I.amOnPage('/#/favorite');
   I.wait(3);
-  
+
   I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found');
 
   // const UnlikedRestaurant = await I.grabTextFrom('.post_item');

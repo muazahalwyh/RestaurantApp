@@ -19,8 +19,8 @@ const Favorite = {
     //   restoContainer.innerHTML += ItemResto(resto);
     // });
 
-    new FavoriteRestoShowPresenter({ view, favoriteRestaurants: FavoriteRestoIdb});
-    new FavoriteRestaurantSearchPresenter({ view, favoriteRestaurants: FavoriteRestoIdb});
+    new FavoriteRestoShowPresenter({ view, favoriteRestaurants: FavoriteRestoIdb });
+    new FavoriteRestaurantSearchPresenter({ view, favoriteRestaurants: FavoriteRestoIdb });
   },
 };
 

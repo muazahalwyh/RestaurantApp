@@ -1,10 +1,10 @@
-import ItemResto from '../../templates/item-resto.js';
+import ItemResto from '../../templates/item-resto';
 
 class FavoriteRestoSearchView {
   getTemplate() {
     return `
       <section class= "content">
-        <input id="query" type="text">
+        <input id="query" type="text" placeholder="search...">
         <h2 tabindex="0" class="content_heading">Your Liked Restaurants</h2>
         <div id="restaurant-search-container">
           <div id = "restaurants" class = "cards">
@@ -44,21 +44,6 @@ class FavoriteRestoSearchView {
   }
 
   showRestaurants(restaurants) {
-    // let html;
-    // if (restaurants.length > 0) {
-    //   html = restaurants.reduce(
-    //     (carry, resto) => carry.concat(`<li class = "restaurant"><span class="restaurant__name">${resto.name || '-'}</span></li>`),
-    //     '',
-    //   );
-    // } else {
-    //   html = '<div class="restaurants__not__found">Restaurant tidak ditemukan</div>';
-    // }
-
-    // document.querySelector('.restaurants').innerHTML = html;
-
-    // document.getElementById('restaurant-search-container')
-    //   .dispatchEvent(new Event('restaurants:searched:updated'));
-
     this.showFavoriteRestaurants(restaurants);
   }
 
@@ -76,7 +61,7 @@ class FavoriteRestoSearchView {
     document.getElementById('restaurants').dispatchEvent(new Event('restaurants:updated'));
   }
 
-  _getEmptyRestaurantTemplate(){
+  _getEmptyRestaurantTemplate() {
     return '<div class="restaurant-item__not__found restaurants__not__found">Tidak ada restaurant untuk ditampilkan</div>';
   }
 }

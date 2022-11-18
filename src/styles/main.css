@@ -164,6 +164,20 @@ main{
   color: black;
 }
 
+input#query {
+  box-shadow: rgb(170, 170, 151);
+  border: 1px solid ghostwhite;
+  padding: 12px 40px 12px 15px;
+  font-size: 18px;
+}
+
+.content_heading {
+  border-bottom: 2px solid black;
+  margin: 20px auto;
+  font-size: 40px;
+  text-align: center;
+}
+
 .latest {
   width: 100%;
   margin: 30px auto;
@@ -171,7 +185,7 @@ main{
 }
 
 .latest_label {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: lighter;
 }
 
@@ -211,8 +225,8 @@ main{
 }
 
 .post_item_city{
-  font-size: 16px;
-  padding: 8px 20px;
+  font-size: 18px;
+  padding: 12px 35px;
   display: inline-block;
   position: absolute;
   top : 15%;
@@ -236,13 +250,14 @@ main{
 
 .post_item_title{
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .post_item_title a{
   text-decoration: none;
   color: rgb(251, 202, 111);
   font-weight: bold;
+  padding: 15px 0;
 }
 
 .post_item_rating{
@@ -268,7 +283,6 @@ main{
 
 /* detail resto */
 
-
 .resto{
   box-shadow: 2px 3px 10px 2px grey;
   color: #000;
@@ -288,36 +302,54 @@ main{
 
 .info{
   display: flex;
-  margin: 20px auto;
   margin-left: 15px;
   font-size: 15px;
+  align-items: center;
+}
+
+.info , i  {
+  min-height: 44px;
+  min-width: 44px;
 }
 
 h2{
   font-size: 30px;
   font-weight: bold;
+  padding: 8px 0px;
 }
 
 .info p{
   margin-left: 15px;
+  padding: 15px 40px 12px 15px;
+  font-size: 16px;
 }
 
 .info .fa-star{
   margin-right: 1px;
 }
 
-h4{
-  margin: 20px auto;
+h4, h3{
+  margin: 10x auto;
   font-size: 18px;
+  padding: 15px 0px;
+}
+
+span.kategori{
+  min-width: 44px;
+  min-height: 44px;
+  margin: 20px;
 }
 
 .kategori{
   border: 2px solid rgb(227, 170, 170);
   border-radius: 15px;
   box-shadow: 3px 0px 2px 1px gray;
-  padding: 8px ;
-  margin-right: 5px ;
+  padding: 10px 15px;
+  align-items: center;
+  margin: 15px auto;
+  margin-left: 15px;
   font-weight: bold;
+  font-size: 18px;
   background-image: linear-gradient(to bottom right, rgb(221, 136, 136), rgb(242, 242, 136));
 }
 
@@ -326,8 +358,12 @@ h4{
 }
 
 h3{
-  font-size: 12px;
-  margin: 20px auto;
+  font-size: 14px;
+}
+
+span.list_menu{
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .list_menu{
@@ -352,6 +388,12 @@ h3{
   justify-content: space-between;
   margin-top: 10px;
   text-align: center;
+}
+
+.review_date, .review_name, .review_body{
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px;
 }
 
 .review_name{

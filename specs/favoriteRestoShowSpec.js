@@ -55,15 +55,15 @@ describe('Showing all favorite restaurants', () => {
       const favoriteRestaurants = spyOnAllFunctions(FavoriteRestoIdb, false);
       favoriteRestaurants.getAllRestaurants.and.returnValues([
         {
-          id: 11, 
-          name: 'A', 
-          rating: 3, 
+          id: 11,
+          name: 'A',
+          rating: 3,
           description: 'Sebuah restaurant A',
         },
         {
-          id: 22, 
-          name: 'B', 
-          rating: 4, 
+          id: 22,
+          name: 'B',
+          rating: 4,
           description: 'Sebuah restaurant B',
         },
       ]);

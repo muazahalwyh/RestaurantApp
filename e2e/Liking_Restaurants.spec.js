@@ -12,7 +12,6 @@ Before(({ I }) => {
   I.amOnPage('/#/favorite');
 });
 
-
 // SKENARIO UJI 1
 Scenario('showing empty liked restaurants', ({ I }) => {
   I.seeElement('#query');
@@ -25,9 +24,9 @@ Scenario('showing empty liked restaurants', ({ I }) => {
 //   I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found');
 
 //   I.amOnPage('/');
-  // … kita akan mengisi uji coba berikutnya …
+// … kita akan mengisi uji coba berikutnya …
 
-  // pause();
+// pause();
 
 // SKENARIO UJI 2
 Scenario('liking one restaurant', async ({ I }) => {
@@ -56,12 +55,11 @@ Scenario('liking one restaurant', async ({ I }) => {
 
   I.seeElement('.post_item');
   I.wait(3);
-  
+
   const likedRestaurantTitle = await I.grabTextFrom('.post_item_title');
 
   assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
 });
-
 
 // // SKENARIO UJI 3
 // Scenario('Unliking one restaurant', async ({ I }) => {
@@ -79,8 +77,7 @@ Scenario('liking one restaurant', async ({ I }) => {
 //   I.seeElement('#likeButton');
 //   I.click('#likeButton');
 
-
-//   /* Unfavorite resto */ 
+//   /* Unfavorite resto */
 
 //   I.amOnPage('/#/favorite');
 //   I.seeElement('.post_item');
@@ -112,7 +109,7 @@ Scenario('liking one restaurant', async ({ I }) => {
 //   I.amOnPage('/');
 
 //   I.seeElement('.post_item_title a');
-  
+
 //   const names = [];
 
 //   for (let i = 1; i <= 3; i++) {
@@ -138,5 +135,5 @@ Scenario('liking one restaurant', async ({ I }) => {
 //   matchingRestaurants.forEach(async (name, index) => {
 //     const visibleTitle = await I.grabTextFrom(locate('.post_item_title').at(index + 1));
 //     assert.strictEqual(name, visibleTitle);
-//   });                                                   
+//   });
 // });
