@@ -178,6 +178,11 @@ input#query {
   text-align: center;
 }
 
+.restaurant-item__not__found.restaurants__not__found {
+  font-size: 16px;
+  padding: 15px;
+}
+
 .latest {
   width: 100%;
   margin: 30px auto;
