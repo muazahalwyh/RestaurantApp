@@ -1,0 +1,120 @@
+.cards{
+  display: grid;
+  grid-row-gap: 16px;
+}
+
+.cards_menu{
+display: grid;
+}
+
+@media screen and (min-width:300px) {
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 16px;
+}
+
+.cards_menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+}
+
+@media screen and (min-width:360px) {
+.header_menu{
+  margin: 50px 0px 0px 70px;
+}
+}
+
+@media screen and (max-width: 650px) {
+.navbar {
+  z-index: 10;
+  background-color:#a28888;
+  width: 300px;
+  position: absolute;
+  margin-top: 158px;
+
+  /* This trasform moves the drawer off canvas. */
+  -webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+}
+
+.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.nav_item {
+  display: list-item;
+  border-bottom: 1px solid #000000;
+  width: 100%;
+  text-align: center;
+}
+
+.cards_detailresto{
+  margin-left: 0px;
+}
+
+.resto{
+  margin: 0px auto;
+}
+
+.resto_img{
+  width: 100%;
+}
+}
+
+@media screen and (min-width: 439px){
+.header_menu{
+  margin:auto ;
+  margin-right: 300px;
+  margin-left: 150px;
+}
+}
+
+@media screen and (min-width: 600px){
+.header_menu{
+  margin-left: 250px;
+}
+}
+
+@media screen and (min-width: 650px) {
+.header_menu {
+  display: none;
+}
+
+.nav_list{
+  margin: 20px auto;
+}
+
+.resto{
+  width: 180%;
+  margin-left: 100px;
+}
+
+.resto img{
+  width: 100%;
+}
+}
+
+@media screen and (min-width: 900px) {
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cards_menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+}
+
+@media screen and (min-width: 1200px) {
+main {
+  max-width: 1200px;
+}
+}
